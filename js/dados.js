@@ -155,7 +155,7 @@ var MENU = {
       price: 12,
     },
     {
-      id: "HOT DOG DUPLO PRENSADO",
+      id: "gramercy-tavern-burger-kielbasa-combo",
       img: "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
       name: "HOT DOG DUPLO PRENSADO",
       dsc: "Gramercy Tavern Burger + Kielbasa Combo",
