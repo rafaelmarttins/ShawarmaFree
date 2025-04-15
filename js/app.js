@@ -319,7 +319,7 @@ cardapio.metodos = {
   // API ViaCEP
   buscarCep: () => {
     // cria a variavel com o valor do cep
-    var cep = $("#txtCEP").val().trim().replace(/\D/g, "");
+    var cep = $("#txtCEP").val().replace("-", "").trim();
 
     // verifica se o CEP possui valor informado
     if (cep != "") {
@@ -568,3 +568,12 @@ cardapio.templates = {
         </div>
     `,
 };
+
+// Aplica máscara de CEP ao digitar (formato 00000-000)
+$(document).on("input", "#txtCEP", function () {
+  let cep = $(this).val().replace(/\D/g, "");
+  if (cep.length > 5) {
+    cep = cep.substring(0, 5) + "-" + cep.substring(5, 8);
+  }
+  $(this).val(cep);
+});
